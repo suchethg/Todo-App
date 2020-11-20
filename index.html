@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head><title>Todo App</title></head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <div id="box">
+            <h1> Todo App</h1>
+            <input type="text" placeholder="Add element" id="todo"><button onclick = "addMe()">add</button>
+            <ol id="list">
+               
+             </ol>  
+        </div>
+     
+        <script>
+   
+            function addMe(){
+                var txt = document.getElementById('todo').value;
+                if(txt!= ""){
+                //adding Task
+              var node = document.createElement('li');
+              node.appendChild(document.createTextNode(txt));
+              document.querySelector('ol').appendChild(node);
+              
+              //removing Task
+              var removeTask = document.createElement('input');
+              removeTask.setAttribute('type', 'button');
+              removeTask.setAttribute("value", "x");
+              removeTask.setAttribute("id", "removeButton");
+              removeTask.addEventListener('click',function(e){node.parentNode.removeChild(node);},false);
+              node.appendChild(removeTask);
+
+        }
+            else
+            {
+                alert("Please insert a value!");
+             }
+            }
+    
+        </script>
+    </body>
+</html>

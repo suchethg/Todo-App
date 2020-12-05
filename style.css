@@ -1,3 +1,6 @@
+body{
+  background-color: #fcba03;
+}
 #box{
     margin:50px 200px;
     padding:20px;
@@ -5,7 +8,7 @@
     text-align: center;
 }
 #list{
-  text-align: center;  
+  text-align: center;
   padding-right: 100px;
   list-style-position:inside;
 }

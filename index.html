@@ -4,15 +4,16 @@
     <link rel="stylesheet" href="style.css">
     <body>
         <div id="box">
-            <h1> Todo App</h1>
+<h1>Welcome to Todo APP</h1>
+            <h1>Todo App</h1>
             <input type="text" placeholder="Add element" id="todo"><button onclick = "addMe()">add</button>
             <ol id="list">
-               
-             </ol>  
+
+             </ol>
         </div>
-     
+
         <script>
-   
+
             function addMe(){
                 var txt = document.getElementById('todo').value;
                 if(txt!= ""){
@@ -20,7 +21,7 @@
               var node = document.createElement('li');
               node.appendChild(document.createTextNode(txt));
               document.querySelector('ol').appendChild(node);
-              
+
               //removing Task
               var removeTask = document.createElement('input');
               removeTask.setAttribute('type', 'button');
@@ -35,7 +36,7 @@
                 alert("Please insert a value!");
              }
             }
-    
+
         </script>
     </body>
 </html>
